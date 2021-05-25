@@ -1,9 +1,12 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
+/*Top header*/
 header {
   width: 100%;
+  /*Description*/
 }
 header .__logo {
   text-align: center;
@@ -15,15 +18,14 @@ header .__loc {
   justify-content: center;
   height: 45px;
   background-color: #e7e7e7;
-  font-family: "Roboto", sans-serif;
   box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3) inset;
 }
-header .fa-map-marker-alt {
+header .__loc .fa-map-marker-alt {
   margin-right: 15px;
 }
 header .__description {
   height: 285px;
-  background-color: whitesmoke;
+  background-color: #f6f6f6;
 }
 header .__description .__title {
   text-align: center;
@@ -33,7 +35,6 @@ header .__description .__title {
   font-weight: bold;
 }
 header .__description .__subtitle {
-  font-family: "Roboto", sans-serif;
   font-weight: 100;
   text-align: center;
   padding-top: 20px;
@@ -51,7 +52,59 @@ header .__description .__btn {
   background: #FF79DA;
   background: linear-gradient(177deg, #FF79DA 0%, #9356CD 82%);
   color: #FFF;
-  font-family: "Roboto", sans-serif;
+}
+
+.operation {
+  height: 440px;
+  padding-top: 40px;
+}
+.operation .__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 18px;
+  padding-bottom: 25px;
+}
+.operation .__step1, .operation .__step2, .operation .__step3 {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 75px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  font-weight: 500;
+  box-shadow: 0px 9px 15px 0px #e7e7e7;
+}
+.operation .__step1 .__number, .operation .__step2 .__number, .operation .__step3 .__number {
+  width: 25px;
+  height: 25px;
+  border-radius: 22px;
+  background-color: #9356CD;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  position: relative;
+  left: -65px;
+}
+.operation .__step1 .__icon, .operation .__step2 .__icon, .operation .__step3 .__icon {
+  color: #7e7e7e;
+  font-size: 1.1rem;
+  position: relative;
+  left: -30px;
+}
+.operation .__step3 {
+  background-color: #f5edff;
+}
+.operation .__step3 .__icon {
+  color: #9356CD;
+}
+.operation .__step2 .__icon {
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,12 +1,14 @@
 $color-primary:#9356CD;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
+$color-icon: rgb(126,126,126);
 
 $bg-1: rgb(231,231,231);
-$bg-2: rgb(245,245,245);
+$bg-2: rgb(246,246,246);
 $bg-3: rgb(47,47,47);
 
 $font-primary:"Roboto", sans-serif;
+$font-title:"Shrikhand";
 
 @mixin flex {
     display: flex;
@@ -17,7 +19,10 @@ $font-primary:"Roboto", sans-serif;
 
 body{
     margin: 0;
+    font-family: $font-primary;
 }
+
+/*Top header*/
 
 header{
     width: 100%;
@@ -29,12 +34,15 @@ header{
         @include flex;
         height: 45px;
         background-color: $bg-1;
-        font-family: $font-primary;
         box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3) inset;
+        .fa-map-marker-alt{
+            margin-right: 15px;
+        }
     }
-    .fa-map-marker-alt{
-        margin-right: 15px;
-    }
+
+
+ /*Description*/   
+
     .__description{
         height: 285px;
         background-color: $bg-2;
@@ -46,7 +54,6 @@ header{
             font-weight: bold;
         }
         .__subtitle{
-            font-family:$font-primary;
             font-weight: 100;
             text-align: center;
             padding-top: 20px;
@@ -62,7 +69,60 @@ header{
             background: $color-secondary;
             background: linear-gradient(177deg, $color-secondary 0%, $color-primary 82%);
             color: #FFF;
-            font-family: $font-primary;
+        }
+    }   
+}
+
+.operation{
+    height: 440px;
+    padding-top: 40px;
+
+    .__title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding-left: 18px;
+        padding-bottom: 25px;
+    }
+    .__step1, .__step2, .__step3{
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include flex;
+        width: 320px;
+        height: 75px;
+        border-radius: 20px;
+        background-color: $bg-2;
+        font-weight: 500;
+        box-shadow: 0px 9px 15px 0px $bg-1;
+
+        .__number{
+            width: 25px;
+            height: 25px;
+            border-radius: 22px;
+            background-color: $color-primary;
+            color: #FFF;
+            @include flex;
+            font-size: 0.8rem;
+            position: relative;
+            left: -65px;
+        }
+        .__icon{
+            color: $color-icon;
+            font-size: 1.1rem;
+            position: relative;
+            left: -30px;
+        }        
+    }
+    .__step3{
+        background-color: rgb(245,237,255);
+        .__icon{
+            color: $color-primary;
+        }
+    }
+    .__step2{
+        .__icon{
+            margin-left: 10px;
         }
     }
 }
+
