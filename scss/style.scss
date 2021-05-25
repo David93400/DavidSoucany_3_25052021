@@ -1,0 +1,68 @@
+$color-primary:#9356CD;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+
+$bg-1: rgb(231,231,231);
+$bg-2: rgb(245,245,245);
+$bg-3: rgb(47,47,47);
+
+$font-primary:"Roboto", sans-serif;
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    .__logo{
+        text-align: center;
+        margin: 20px 0 10px 0;   
+    }
+    .__loc{
+        @include flex;
+        height: 45px;
+        background-color: $bg-1;
+        font-family: $font-primary;
+        box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3) inset;
+    }
+    .fa-map-marker-alt{
+        margin-right: 15px;
+    }
+    .__description{
+        height: 285px;
+        background-color: $bg-2;
+        .__title{
+            text-align: center;
+            font-family: "Roboto";
+            padding-top: 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .__subtitle{
+            font-family:$font-primary;
+            font-weight: 100;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 1.15rem;
+        }
+        .__btn{
+            width: 215px;
+            height: 50px;
+            @include flex;
+            margin: auto;
+            margin-top: 25px;
+            border-radius: 50px;
+            background: $color-secondary;
+            background: linear-gradient(177deg, $color-secondary 0%, $color-primary 82%);
+            color: #FFF;
+            font-family: $font-primary;
+        }
+    }
+}

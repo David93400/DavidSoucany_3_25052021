@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+}
+header .__logo {
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+header .__loc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: #e7e7e7;
+  font-family: "Roboto", sans-serif;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3) inset;
+}
+header .fa-map-marker-alt {
+  margin-right: 15px;
+}
+header .__description {
+  height: 285px;
+  background-color: whitesmoke;
+}
+header .__description .__title {
+  text-align: center;
+  font-family: "Roboto";
+  padding-top: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header .__description .__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.15rem;
+}
+header .__description .__btn {
+  width: 215px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 50px;
+  background: #FF79DA;
+  background: linear-gradient(177deg, #FF79DA 0%, #9356CD 82%);
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
