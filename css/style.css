@@ -54,6 +54,7 @@ header .__description .__btn {
   color: #FFF;
 }
 
+/*Fonctionnement*/
 .operation {
   height: 390px;
   padding-top: 55px;
@@ -107,6 +108,7 @@ header .__description .__btn {
   margin-left: 10px;
 }
 
+/*Restaurants*/
 .restaurant {
   background-color: #f6f6f6;
 }
@@ -165,6 +167,28 @@ header .__description .__btn {
 .restaurant .__description .__heart--empty {
   font-size: 1.5rem;
   margin-right: -90px;
+}
+
+/*Footer*/
+footer {
+  height: 200px;
+  background-color: #363636;
+  margin-top: 60px;
+  color: #FFF;
+}
+footer .__logo img {
+  width: 100px;
+  height: auto;
+  margin: 25px 0 15px 20px;
+}
+footer p {
+  width: 88%;
+  margin: auto;
+  line-height: 1.8rem;
+}
+footer p .fas {
+  padding-right: 10px;
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

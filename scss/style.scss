@@ -5,7 +5,7 @@ $color-icon: rgb(126,126,126);
 
 $bg-1: rgb(231,231,231);
 $bg-2: rgb(246,246,246);
-$bg-3: rgb(47,47,47);
+$bg-3: rgb(54,54,54);
 
 $font-primary:"Roboto", sans-serif;
 $font-title:"Shrikhand";
@@ -73,6 +73,8 @@ header{
     }   
 }
 
+/*Fonctionnement*/
+
 .operation{
     height: 390px;
     padding-top: 55px;
@@ -126,6 +128,8 @@ header{
     }
 }
 
+
+/*Restaurants*/
 
 .restaurant{
     background-color: $bg-2;
@@ -189,5 +193,28 @@ header{
         }
 
     } 
+}
+
+/*Footer*/
+
+footer{
+    height: 200px;
+    background-color: $bg-3;
+    margin-top: 60px;
+    color: #FFF;
+    .__logo img{
+        width: 100px;
+        height: auto;
+        margin: 25px 0 15px 20px
+    }
+    p{
+        width: 88%;
+        margin: auto;
+        line-height: 1.8rem;
+        .fas{
+            padding-right: 10px;
+            font-size: 0.8rem;
+        }
+    }
 }
 
