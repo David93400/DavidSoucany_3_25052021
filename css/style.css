@@ -55,14 +55,14 @@ header .__description .__btn {
 }
 
 .operation {
-  height: 440px;
-  padding-top: 40px;
+  height: 390px;
+  padding-top: 55px;
 }
 .operation .__title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  padding-left: 18px;
-  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-bottom: 15px;
 }
 .operation .__step1, .operation .__step2, .operation .__step3 {
   margin: auto;
@@ -105,6 +105,66 @@ header .__description .__btn {
 }
 .operation .__step2 .__icon {
   margin-left: 10px;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+}
+.restaurant .__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 55px 0 25px 20px;
+}
+.restaurant .__thumbnail {
+  height: 250px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 17px;
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 0px 9px 15px 0px #e7e7e7;
+}
+.restaurant .__img img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant .__img {
+  height: 175px;
+}
+.restaurant .__img .__new {
+  width: 75px;
+  height: 25px;
+  background-color: #99e2d0;
+  color: #008766;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  position: relative;
+  top: -165px;
+  right: -235px;
+}
+.restaurant .__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant .__description span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.restaurant .__description p {
+  font-weight: 200;
+  font-size: 1.1rem;
+  padding-left: 13px;
+  line-height: 1.5rem;
+}
+.restaurant .__description .__heart--empty {
+  font-size: 1.5rem;
+  margin-right: -90px;
 }
 
 /*# sourceMappingURL=style.css.map */
