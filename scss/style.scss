@@ -22,13 +22,35 @@ body{
     font-family: $font-primary;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #000000;
+}
+
 /*Top header*/
 
 header{
     width: 100%;
+
+    .fa-arrow-left{
+        font-size: 1.3rem;
+        position: absolute;
+        left: 25px;
+        top: 22px;
+    }
+
     .__logo{
-        text-align: center;
-        margin: 20px 0 10px 0;   
+        @include flex;
+        margin: 20px 0 20px 0; 
+    }
+
+    .__logo img{
+        width: 50%;
     }
     .__loc{
         @include flex;
@@ -69,6 +91,11 @@ header{
             background: $color-secondary;
             background: linear-gradient(177deg, $color-secondary 0%, $color-primary 82%);
             color: #FFF;
+
+            &:hover{
+                filter: brightness(120%);
+                cursor: pointer;
+            }
         }
     }   
 }
@@ -83,7 +110,7 @@ header{
         font-size: 1.4rem;
         font-weight: bold;
         padding-left: 20px;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
     }
     .__step1, .__step2, .__step3{
         margin: auto;
@@ -133,6 +160,7 @@ header{
 
 .restaurant{
     background-color: $bg-2;
+    margin-bottom: 60px;
     .__title{
         font-weight: bold;
         font-size: 1.5rem;
@@ -195,12 +223,131 @@ header{
     } 
 }
 
+
+
+/** Menu Restaurants**/
+
+.__bg{
+    width: 100%;
+    height: 270px;
+    margin-top: -10px;
+
+    img{
+        max-width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+}
+
+.__menu{
+    width: 100%;
+    height: 1160px;
+    background-color: $bg-2;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    bottom:55px;
+    margin-bottom: -55px;
+
+    .__title1{
+        @include flex;
+        justify-content: space-around;
+        font-family: "Shrikhand";
+        padding-top: 10px;
+
+        p{
+            font-size: 1.7rem;
+            padding-left: 5px;
+        }
+        .fa-heart{
+            font-size: 1.5rem;
+            padding-right: 14px;
+        }    
+    }
+
+    .__starter, .__main, .__desserts{
+        width: 93%;
+        margin: auto;
+
+        .__title{
+            font-family: "Roboto";
+            font-weight: 400;
+            display: block;
+            margin: -10px 0 0 5px;
+            .__line--green{
+                width: 35px;
+                height: 3px;
+                background-color: $color-tertiary;
+                margin-top: -11px;
+            }
+        }
+
+        .__opt1{
+            height: 65px;
+            margin: 15px 0 15px 0;
+            background-color: white;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 11px 15px 0px $bg-1;
+            
+
+            .__name{
+                width: 90%;
+                margin: auto;
+                margin-bottom: -5px;
+                font-weight: 500;
+                font-size: 1.15rem;
+            }
+
+            .__info{
+                width: 90%;
+                @include flex;
+                justify-content: space-between;
+                margin: auto;
+
+                .__description{
+                    font-weight: 100;
+                    font-size: 0.95rem;   
+                }
+
+                .__price{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .__main, .__desserts{
+        margin-top: 50px;
+    }
+
+    .__btn{
+        width: 190px;
+        height: 50px;
+        @include flex;
+        margin: auto;
+        margin-top: 60px;
+        border-radius: 50px;
+        background: $color-secondary;
+        background: linear-gradient(177deg, $color-secondary 0%, $color-primary 82%);
+        color: #FFF;
+
+        &:hover{
+            filter: brightness(120%);
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+
+
 /*Footer*/
 
 footer{
     height: 200px;
     background-color: $bg-3;
-    margin-top: 60px;
     color: #FFF;
     .__logo img{
         width: 100px;
