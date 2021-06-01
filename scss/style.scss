@@ -239,14 +239,26 @@ header{
     }
 }
 
+.__bg2{
+    width: 100%;
+    height: 270px;
+    margin-top: -10px;
+
+    img{
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
 .__menu{
     width: 100%;
-    height: 1160px;
     background-color: $bg-2;
     border-radius: 35px 35px 0 0;
     position: relative;
     bottom:55px;
+    padding-bottom: 70px;
     margin-bottom: -55px;
+
 
 
     .__title1{
@@ -282,7 +294,7 @@ header{
             }
         }
 
-        .__opt1{
+        .__opt{
             height: 65px;
             margin: 15px 0 15px 0;
             background-color: white;
@@ -298,6 +310,9 @@ header{
                 margin-bottom: -5px;
                 font-weight: 500;
                 font-size: 1.12rem;
+                text-overflow: ellipsis; 
+                overflow: hidden;
+                white-space: nowrap;
             }
 
             .__info{
@@ -327,7 +342,7 @@ header{
         margin-top: 50px;
     }
 
-    .__btn{
+    .__btn-cmd{
         width: 190px;
         height: 50px;
         @include flex;
@@ -338,6 +353,7 @@ header{
         box-shadow: 0px 11px 15px 0px $bg-1;
         background: linear-gradient(177deg, $color-secondary 0%, $color-primary 82%);
         color: #FFF;
+
 
         &:hover{
             filter: brightness(120%);

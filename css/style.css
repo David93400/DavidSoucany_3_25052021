@@ -207,13 +207,23 @@ header .__description .__btn:hover {
   object-fit: cover;
 }
 
+.__bg2 {
+  width: 100%;
+  height: 270px;
+  margin-top: -10px;
+}
+.__bg2 img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
 .__menu {
   width: 100%;
-  height: 1160px;
   background-color: #f6f6f6;
   border-radius: 35px 35px 0 0;
   position: relative;
   bottom: 55px;
+  padding-bottom: 70px;
   margin-bottom: -55px;
 }
 .__menu .__title1 {
@@ -248,7 +258,7 @@ header .__description .__btn:hover {
   background-color: #99E2D0;
   margin-top: -11px;
 }
-.__menu .__starter .__opt1, .__menu .__main .__opt1, .__menu .__desserts .__opt1 {
+.__menu .__starter .__opt, .__menu .__main .__opt, .__menu .__desserts .__opt {
   height: 65px;
   margin: 15px 0 15px 0;
   background-color: white;
@@ -257,14 +267,17 @@ header .__description .__btn:hover {
   flex-direction: column;
   box-shadow: 0px 11px 15px 0px #e7e7e7;
 }
-.__menu .__starter .__opt1 .__name, .__menu .__main .__opt1 .__name, .__menu .__desserts .__opt1 .__name {
+.__menu .__starter .__opt .__name, .__menu .__main .__opt .__name, .__menu .__desserts .__opt .__name {
   width: 90%;
   margin: auto;
   margin-bottom: -5px;
   font-weight: 500;
   font-size: 1.12rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.__menu .__starter .__opt1 .__info, .__menu .__main .__opt1 .__info, .__menu .__desserts .__opt1 .__info {
+.__menu .__starter .__opt .__info, .__menu .__main .__opt .__info, .__menu .__desserts .__opt .__info {
   width: 90%;
   display: flex;
   align-items: center;
@@ -272,7 +285,7 @@ header .__description .__btn:hover {
   justify-content: space-between;
   margin: auto;
 }
-.__menu .__starter .__opt1 .__info .__description, .__menu .__main .__opt1 .__info .__description, .__menu .__desserts .__opt1 .__info .__description {
+.__menu .__starter .__opt .__info .__description, .__menu .__main .__opt .__info .__description, .__menu .__desserts .__opt .__info .__description {
   width: 90%;
   display: block;
   font-weight: 100;
@@ -281,13 +294,13 @@ header .__description .__btn:hover {
   overflow: hidden;
   white-space: nowrap;
 }
-.__menu .__starter .__opt1 .__info .__price, .__menu .__main .__opt1 .__info .__price, .__menu .__desserts .__opt1 .__info .__price {
+.__menu .__starter .__opt .__info .__price, .__menu .__main .__opt .__info .__price, .__menu .__desserts .__opt .__info .__price {
   font-weight: 600;
 }
 .__menu .__main, .__menu .__desserts {
   margin-top: 50px;
 }
-.__menu .__btn {
+.__menu .__btn-cmd {
   width: 190px;
   height: 50px;
   display: flex;
@@ -301,7 +314,7 @@ header .__description .__btn:hover {
   background: linear-gradient(177deg, #FF79DA 0%, #9356CD 82%);
   color: #FFF;
 }
-.__menu .__btn:hover {
+.__menu .__btn-cmd:hover {
   filter: brightness(120%);
   cursor: pointer;
 }
