@@ -202,13 +202,15 @@ header .__description .__btn {
   margin: auto;
   margin-top: 25px;
   border-radius: 50px;
+  box-shadow: 2px 2px 10px 0px grey;
   background: #FF79DA;
   background: linear-gradient(177deg, #FF79DA 0%, #9356CD 82%);
   color: #FFF;
 }
 header .__description .__btn:hover {
-  filter: brightness(120%);
+  filter: brightness(110%);
   cursor: pointer;
+  box-shadow: 5px 5px 3px 0px grey;
 }
 
 /*Fonctionnement*/
@@ -311,6 +313,7 @@ header .__description .__btn:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
 }
 .restaurant .__description span {
   font-weight: bold;
@@ -324,7 +327,16 @@ header .__description .__btn:hover {
 }
 .restaurant .__description .__heart--empty {
   font-size: 1.5rem;
-  margin-right: -90px;
+  position: relative;
+  left: 105px;
+  bottom: 5px;
+  scale: 1;
+}
+.restaurant .__description .__heart--empty:hover {
+  transform: scale(0);
+}
+.restaurant .__description .__heart--full .fa-heart {
+  visibility: hidden;
 }
 
 /** Menu Restaurants**/
@@ -442,13 +454,14 @@ header .__description .__btn:hover {
   margin-top: 55px;
   border-radius: 50px;
   background: #FF79DA;
-  box-shadow: 0px 11px 15px 0px #e7e7e7;
+  box-shadow: 2px 2px 10px 0px grey;
   background: linear-gradient(177deg, #FF79DA 0%, #9356CD 82%);
   color: #FFF;
 }
 .__menu .__btn-cmd:hover {
-  filter: brightness(120%);
+  filter: brightness(110%);
   cursor: pointer;
+  box-shadow: 5px 5px 3px 0px grey;
 }
 
 /*Footer*/
@@ -471,5 +484,10 @@ footer p .fas {
   padding-right: 10px;
   font-size: 0.8rem;
 }
+footer p a {
+  color: white;
+}
+
+/*Responsive*/
 
 /*# sourceMappingURL=style.css.map */
