@@ -256,7 +256,8 @@ header .__logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 header .__logo img {
   width: 50%;
@@ -351,7 +352,15 @@ header .__description .__btn:hover {
   color: #7e7e7e;
   font-size: 1.1rem;
   position: relative;
-  left: -30px;
+  right: 30px;
+}
+.operation .__step1 .fa-list, .operation .__step2 .fa-list, .operation .__step3 .fa-list {
+  position: relative;
+  right: 10px;
+}
+.operation .__step1 .fa-mobiel, .operation .__step2 .fa-mobiel, .operation .__step3 .fa-mobiel {
+  position: relative;
+  right: 2px;
 }
 .operation .__step3 {
   background-color: #f5edff;
@@ -390,6 +399,7 @@ header .__description .__btn:hover {
 }
 .restaurant .__img {
   height: 175px;
+  position: relative;
 }
 .restaurant .__img .__new {
   width: 75px;
@@ -401,15 +411,19 @@ header .__description .__btn:hover {
   justify-content: center;
   font-size: 0.9rem;
   font-weight: 400;
-  position: relative;
-  top: -165px;
-  right: -235px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 .restaurant .__description {
+  width: 90%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
+}
+.restaurant .__description .__nameloc {
+  width: 60%;
 }
 .restaurant .__description span {
   font-weight: bold;
@@ -422,10 +436,10 @@ header .__description .__btn:hover {
   line-height: 1.5rem;
 }
 .restaurant .__description .__heart--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
-  position: relative;
-  left: 105px;
-  bottom: 5px;
   scale: 1;
 }
 .restaurant .__description .__heart--empty:hover {
@@ -585,66 +599,64 @@ footer p a {
 }
 
 /*Responsive*/
-.cssload-loader {
-  position: relative;
-  left: calc(50% - 31px);
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  perspective: 780px;
-}
+@media (min-width: 768px) {
+  .__logo {
+    width: 500px;
+    margin: auto;
+  }
 
-.cssload-inner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-}
+  .operation .__title {
+    width: 14vh;
+    margin: auto;
+    padding: 0;
+    padding-bottom: 1vh;
+  }
 
-.cssload-inner.cssload-one {
-  left: 0%;
-  top: 0%;
-  animation: cssload-rotate-one 1.15s linear infinite;
-  -o-animation: cssload-rotate-one 1.15s linear infinite;
-  -ms-animation: cssload-rotate-one 1.15s linear infinite;
-  -webkit-animation: cssload-rotate-one 1.15s linear infinite;
-  -moz-animation: cssload-rotate-one 1.15s linear infinite;
-  border-bottom: 3px solid black;
-}
+  .__bloc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-.cssload-inner.cssload-two {
-  right: 0%;
-  top: 0%;
-  animation: cssload-rotate-two 1.15s linear infinite;
-  -o-animation: cssload-rotate-two 1.15s linear infinite;
-  -ms-animation: cssload-rotate-two 1.15s linear infinite;
-  -webkit-animation: cssload-rotate-two 1.15s linear infinite;
-  -moz-animation: cssload-rotate-two 1.15s linear infinite;
-  border-right: 3px solid black;
-}
+  .restaurant .__description {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.cssload-inner.cssload-three {
-  right: 0%;
-  bottom: 0%;
-  animation: cssload-rotate-three 1.15s linear infinite;
-  -o-animation: cssload-rotate-three 1.15s linear infinite;
-  -ms-animation: cssload-rotate-three 1.15s linear infinite;
-  -webkit-animation: cssload-rotate-three 1.15s linear infinite;
-  -moz-animation: cssload-rotate-three 1.15s linear infinite;
-  border-top: 3px solid black;
+  footer .__bloclink {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .__logo {
+    width: 7vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer p {
+    width: 15vh;
+    text-align: center;
+    margin-top: 3vh;
+  }
+}
+@media (min-width: 1440px) {
+  .__bloc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .__blocstep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .operation {
+    height: 20vh;
+    display: grid;
+    grid-template-rows: 0.2fr 0.5fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
