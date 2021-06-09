@@ -11,6 +11,20 @@
   overflow: visible;
   animation: fade 2.5s linear forwards;
 }
+.__container .__logoanim {
+  font-family: "Shrikhand";
+  font-size: 2.2rem;
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  z-index: 998;
+  overflow: visible;
+  margin: auto;
+  left: 0;
+  right: 3vh;
+  top: 35vh;
+  animation: color 2s both ease-in-out;
+}
 .__container .cssload-loader {
   position: fixed;
   left: calc(50% - 44px);
@@ -224,6 +238,25 @@
   }
   100% {
     visibility: hidden;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes color {
+  0% {
+    color: #9356CD;
+  }
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    color: #99E2D0;
   }
 }
 body {
@@ -456,7 +489,7 @@ header .__description .__btn:hover {
   margin-top: -10px;
 }
 .__bg img {
-  max-width: 100%;
+  width: 100%;
   height: 270px;
   object-fit: cover;
 }
@@ -550,8 +583,49 @@ header .__description .__btn:hover {
 }
 .__menu .__starter .__opt .__info .__price, .__menu .__main .__opt .__info .__price, .__menu .__desserts .__opt .__info .__price {
   font-weight: 600;
+  padding-bottom: 18px;
 }
-.__menu .__main, .__menu .__desserts {
+.__menu .__starter #bloc1, .__menu .__main #bloc1, .__menu .__desserts #bloc1 {
+  animation: opacity 1s both;
+  animation-delay: 0.1s;
+}
+.__menu .__starter #bloc2, .__menu .__main #bloc2, .__menu .__desserts #bloc2 {
+  animation: opacity 1s both;
+  animation-delay: 0.2s;
+}
+.__menu .__starter #bloc3, .__menu .__main #bloc3, .__menu .__desserts #bloc3 {
+  animation: opacity 1s both;
+  animation-delay: 0.3s;
+}
+.__menu .__starter #bloc4, .__menu .__main #bloc4, .__menu .__desserts #bloc4 {
+  animation: opacity 1s both;
+  animation-delay: 0.4s;
+}
+.__menu .__starter #bloc5, .__menu .__main #bloc5, .__menu .__desserts #bloc5 {
+  animation: opacity 1s both;
+  animation-delay: 0.5s;
+}
+.__menu .__starter #bloc6, .__menu .__main #bloc6, .__menu .__desserts #bloc6 {
+  animation: opacity 1s both;
+  animation-delay: 0.6s;
+}
+.__menu .__starter #bloc7, .__menu .__main #bloc7, .__menu .__desserts #bloc7 {
+  animation: opacity 1s both;
+  animation-delay: 0.7s;
+}
+.__menu .__starter #bloc8, .__menu .__main #bloc8, .__menu .__desserts #bloc8 {
+  animation: opacity 1s both;
+  animation-delay: 0.8s;
+}
+.__menu .__starter #bloc9, .__menu .__main #bloc9, .__menu .__desserts #bloc9 {
+  animation: opacity 1s both;
+  animation-delay: 0.9s;
+}
+.__menu .__starter #bloc10, .__menu .__main #bloc10, .__menu .__desserts #bloc10 {
+  animation: opacity 1s both;
+  animation-delay: 1s;
+}
+.__menu .__main, .__menu .__desserts, .__menu .__starter {
   margin-top: 60px;
 }
 .__menu .__btn-cmd {
@@ -638,6 +712,20 @@ footer p a {
     width: 15vh;
     text-align: center;
     margin-top: 3vh;
+  }
+}
+@media (min-width: 1100px) {
+  .__blocmenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  footer {
+    height: 300px;
+  }
+  footer .__logo {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 @media (min-width: 1440px) {
