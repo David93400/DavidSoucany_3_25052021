@@ -323,6 +323,25 @@ $font-title:"Shrikhand";
     }
 }
 
+@keyframes slide-left {
+    0% {
+              transform: scaleX(0);
+    }
+    100% {
+              transform: scaleX(-50px);
+    }
+  }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 body{
     margin: 0;
@@ -612,6 +631,7 @@ header{
     .__starter, .__main, .__desserts{
         width: 93%;
         margin: auto;
+        
 
         .__title{
             font-family: "Roboto";
@@ -627,6 +647,9 @@ header{
         }
 
         .__opt{
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
             height: 67px;
             margin: 15px 0 15px 0;
             background-color: white;
@@ -634,24 +657,33 @@ header{
             display: flex;
             flex-direction: column;
             box-shadow: 0px 11px 15px 0px $bg-1;
-            
-
-            .__name{
-                width: 90%;
-                margin: auto;
-                margin-bottom: -5px;
-                font-weight: 500;
-                font-size: 1.12rem;
-                text-overflow: ellipsis; 
-                overflow: hidden;
-                white-space: nowrap;
+            &:hover .__valid_box{
+                -webkit-animation: slide-left 0.6s both;
+	            animation: slide-left 0.6s both;
+                @include flex;  
+                transform-origin: right; 
+            }
+            &:hover .__price {
+                padding-right: 70px;
+                transition: 0.5s ease ;
             }
 
             .__info{
                 width: 90%;
+                height: 30px;
                 @include flex;
                 justify-content: space-between;
                 margin: auto;
+                line-height: 1.5rem;
+                span{
+                    width: 90%;
+                    margin: auto;
+                    padding-top: 10px;
+                    font-weight: 500;
+                    font-size: 1.12rem;
+                    text-overflow: ellipsis;   
+                    white-space: nowrap;
+                }
 
                 .__description{
                     width: 90%;
@@ -665,10 +697,28 @@ header{
 
                 .__price{
                     font-weight: 600;
-                    padding-bottom: 18px;
+                    margin-left: 5px;
+                }
+            }
+
+            .__valid_box{
+                display: none;
+                position: absolute;
+                right: 0px;
+                height: 100%;
+                padding: 0 20px;
+                background-color: $color-tertiary;
+                border-radius: 0 15px 15px 0; 
+                
+                i{
+                    font-size: 30px;
+                    color: white;
+                    transform: rotate(180deg);
+                    animation: rotate 0.5s both;
                 }
             }
         }
+
         #bloc1{
             animation: opacity 1s both;
             animation-delay: 0.1s;
