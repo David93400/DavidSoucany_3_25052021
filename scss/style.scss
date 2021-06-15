@@ -544,6 +544,11 @@ header{
         align-items: center;
         position: absolute;
 
+        .__btn{
+            margin-right: 25px;
+            margin-bottom: 10px;
+        }
+
         .__nameloc{
             width: 60%;
         }
@@ -621,11 +626,11 @@ header{
         p{
             font-size: 1.7rem;
             padding-left: 5px;
-        }
-        .fa-heart{
-            font-size: 1.5rem;
-            padding-right: 14px;
-        }    
+        } 
+
+        .menu__like {
+            background-color: $bg-2;
+        }  
     }
 
     .__starter, .__main, .__desserts{
@@ -815,6 +820,67 @@ footer{
     }
 }
 
+
+
+/*coeur*/
+
+  
+.__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    @include flex;
+    cursor: pointer;
+    position: relative;
+    background-color: black;
+    
+    &:hover::before {
+    opacity: 1;
+    }
+    
+    &::before {
+    opacity: 0;
+    transition: 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+    }
+}
+  
+.menu__like {
+    transition-duration: .25s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    @include flex;
+    mix-blend-mode: lighten;
+}
+
+.__btn:hover {
+    .menu__like {
+    &--noBg {
+        opacity: 0;
+    }
+    }
+}
+
+
+
+
+  
+
+  
+
+  
 
 /*Responsive*/
 
