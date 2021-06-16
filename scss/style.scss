@@ -408,7 +408,7 @@ header{
             padding-top: 20px;
             font-size: 1.15rem;
         }
-        .__btn{
+        .__explore{
             width: 215px;
             height: 50px;
             @include flex;
@@ -416,7 +416,6 @@ header{
             margin-top: 25px;
             border-radius: 50px;
             box-shadow: 2px 2px 10px 0px grey;
-            background: $color-secondary;
             background: linear-gradient(177deg, $color-secondary 0%, $color-primary 82%);
             color: #FFF;
 
@@ -513,6 +512,9 @@ header{
         background-color: #FFF;
         border-radius: 20px;
         box-shadow: 0px 9px 15px 0px $bg-1;
+        &:hover{
+            box-shadow: 5px 5px 3px 0px grey;
+        }
     }
     .__img img{
         width: 100%;
@@ -562,18 +564,6 @@ header{
             font-size: 1.1rem;
             padding-left: 13px;
             line-height:1.5rem;
-        }
-        .__heart--empty{
-            @include flex;
-            font-size: 1.5rem;
-            scale: 1;
-                &:hover{
-                    transform: scale(0);
-                }
-        }
-
-        .__heart--full .fa-heart{
-            visibility: hidden;
         }
     } 
 }
@@ -770,14 +760,13 @@ header{
         margin-top: 60px;
     }
 
-    .__btn-cmd{
+    .__btn1-cmd{
         width: 190px;
         height: 50px;
         @include flex;
         margin: auto;
         margin-top: 55px;
         border-radius: 50px;
-        background: $color-secondary;
         box-shadow: 2px 2px 10px 0px grey;
         background: linear-gradient(177deg, $color-secondary 0%, $color-primary 82%);
         color: #FFF;
@@ -850,6 +839,9 @@ footer{
     height: 100%;
     width: 100%;
     background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+    }
+    .fas, .far{
+        font-size: 1.7rem;
     }
 }
   
@@ -979,7 +971,18 @@ footer{
         
     }
 
+    .__thumbnail{
+        .__description{
+            width: 22%;
+        }
+    }
+
 }
+
+
+
+
+
 
 
 

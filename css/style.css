@@ -339,7 +339,7 @@ header .__description .__subtitle {
   padding-top: 20px;
   font-size: 1.15rem;
 }
-header .__description .__btn {
+header .__description .__explore {
   width: 215px;
   height: 50px;
   display: flex;
@@ -349,11 +349,10 @@ header .__description .__btn {
   margin-top: 25px;
   border-radius: 50px;
   box-shadow: 2px 2px 10px 0px grey;
-  background: #FF79DA;
   background: linear-gradient(177deg, #FF79DA 0%, #9356CD 82%);
   color: #FFF;
 }
-header .__description .__btn:hover {
+header .__description .__explore:hover {
   filter: brightness(110%);
   cursor: pointer;
   box-shadow: 5px 5px 3px 0px grey;
@@ -440,6 +439,9 @@ header .__description .__btn:hover {
   border-radius: 20px;
   box-shadow: 0px 9px 15px 0px #e7e7e7;
 }
+.restaurant .__thumbnail:hover {
+  box-shadow: 5px 5px 3px 0px grey;
+}
 .restaurant .__img img {
   width: 100%;
   height: 175px;
@@ -487,19 +489,6 @@ header .__description .__btn:hover {
   font-size: 1.1rem;
   padding-left: 13px;
   line-height: 1.5rem;
-}
-.restaurant .__description .__heart--empty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  scale: 1;
-}
-.restaurant .__description .__heart--empty:hover {
-  transform: scale(0);
-}
-.restaurant .__description .__heart--full .fa-heart {
-  visibility: hidden;
 }
 
 /** Menu Restaurants**/
@@ -678,7 +667,7 @@ header .__description .__btn:hover {
 .__menu .__main, .__menu .__desserts, .__menu .__starter {
   margin-top: 60px;
 }
-.__menu .__btn-cmd {
+.__menu .__btn1-cmd {
   width: 190px;
   height: 50px;
   display: flex;
@@ -687,12 +676,11 @@ header .__description .__btn:hover {
   margin: auto;
   margin-top: 55px;
   border-radius: 50px;
-  background: #FF79DA;
   box-shadow: 2px 2px 10px 0px grey;
   background: linear-gradient(177deg, #FF79DA 0%, #9356CD 82%);
   color: #FFF;
 }
-.__menu .__btn-cmd:hover {
+.__menu .__btn1-cmd:hover {
   filter: brightness(110%);
   cursor: pointer;
   box-shadow: 5px 5px 3px 0px grey;
@@ -749,6 +737,9 @@ footer p a {
   height: 100%;
   width: 100%;
   background: linear-gradient(0deg, #9356CD 0%, #FF79DA 100%);
+}
+.__btn .fas, .__btn .far {
+  font-size: 1.7rem;
 }
 
 .menu__like {
@@ -841,6 +832,10 @@ footer p a {
     height: 20vh;
     display: grid;
     grid-template-rows: 0.2fr 0.5fr;
+  }
+
+  .__thumbnail .__description {
+    width: 22%;
   }
 }
 
